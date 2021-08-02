@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:id="@+id/store_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/store_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/css_gray"
+            android:paddingBottom="10dp"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/store_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Store Title"
+            android:textColor="#ffff00"
+            android:layout_alignBottom="@id/store_image"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <TextView
+            android:id="@+id/store_open_hrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Daily from 7:00 am"
+            android:textColor="?android:textColorSecondary"
+            android:layout_below="@id/store_title"
+            android:padding="10dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:drawableStart="@drawable/ic_prep_time"
+            android:drawableTint="@color/teal_200"/>
+
+        <TextView
+            android:id="@+id/store_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Store Short Description"
+            android:textColor="@color/navy_blue"
+            android:layout_below="@id/store_open_hrs"
+            android:padding="8dp"
+            android:layout_marginTop="3dp"
+            android:textStyle="italic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <!--Add a horizontal line-->
+        <View
+            android:id="@+id/store_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/css_gray"
+            android:layout_below="@id/store_description"/>
+
+        <ImageView
+            android:id="@+id/star_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_divider"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_star_rate"/>
+
+        <ImageView
+            android:id="@+id/star_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_divider"
+            android:layout_toEndOf="@id/star_one"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_star_rate"
+            android:layout_toRightOf="@id/star_one" />
+
+        <ImageView
+            android:id="@+id/star_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_divider"
+            android:layout_toEndOf="@id/star_two"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_star_rate"
+            android:layout_toRightOf="@id/star_two" />
+
+        <ImageView
+            android:id="@+id/star_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_divider"
+            android:layout_toEndOf="@id/star_three"
+            android:layout_marginTop="4dp"
+            android:tint="@color/teal_200"
+            android:src="@drawable/ic_star_rate"
+            android:layout_toRightOf="@id/star_three" />
+
+        <ImageView
+            android:id="@+id/star_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_divider"
+            android:layout_toEndOf="@id/star_four"
+            android:layout_marginTop="4dp"
+            android:tint="@color/teal_200"
+            android:src="@drawable/ic_star_rate"
+            android:layout_toRightOf="@id/star_four" />
+
+        <TextView
+            android:id="@+id/store_like"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:textColor="?android:textColorSecondary"
+            android:layout_below="@id/star_one"
+            android:paddingTop="5dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:drawableStart="@drawable/ic_like"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:id="@+id/store_comment"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:textColor="?android:textColorSecondary"
+            android:layout_below="@id/star_one"
+            android:layout_toEndOf="@id/store_like"
+            android:paddingTop="5dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:drawableStart="@drawable/ic_edit"
+            android:drawablePadding="4dp"
+            android:layout_toRightOf="@id/store_like" />
+
+        <TextView
+            android:id="@+id/stor_share"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:textColor="?android:textColorSecondary"
+            android:layout_below="@id/star_one"
+            android:layout_toEndOf="@id/store_comment"
+            android:paddingTop="5dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:drawableStart="@drawable/ic_share"
+            android:drawablePadding="4dp"
+            android:layout_toRightOf="@id/store_comment" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

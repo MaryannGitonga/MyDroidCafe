@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoreActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/s_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:id="@+id/s_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/s_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/css_gray"
+                android:paddingBottom="10dp"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/s_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Title"
+                android:textColor="#ffff00"
+                android:layout_alignBottom="@id/s_image"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            <TextView
+                android:id="@+id/s_open_hrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Daily from 7:00 am"
+                android:textColor="?android:textColorSecondary"
+                android:layout_below="@id/s_title"
+                android:padding="10dp"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:drawableStart="@drawable/ic_prep_time"
+                android:drawableTint="@color/teal_200"/>
+
+            <TextView
+                android:id="@+id/s_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Short Description"
+                android:textColor="@color/navy_blue"
+                android:layout_below="@id/s_open_hrs"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:textStyle="italic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            <!--Add a horizontal line-->
+            <View
+                android:id="@+id/s_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/css_gray"
+                android:layout_below="@id/s_description"/>
+
+            <ImageView
+                android:id="@+id/s_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/s_divider"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_star_rate"/>
+
+            <ImageView
+                android:id="@+id/s_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/s_divider"
+                android:layout_toEndOf="@id/s_one"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_star_rate"/>
+
+            <ImageView
+                android:id="@+id/s_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/s_divider"
+                android:layout_toEndOf="@id/s_two"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_star_rate"/>
+
+            <ImageView
+                android:id="@+id/s_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/s_divider"
+                android:layout_toEndOf="@id/s_three"
+                android:layout_marginTop="4dp"
+                android:tint="@color/teal_200"
+                android:src="@drawable/ic_star_rate"/>
+
+            <ImageView
+                android:id="@+id/s_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/s_divider"
+                android:layout_toEndOf="@id/s_four"
+                android:layout_marginTop="4dp"
+                android:tint="@color/teal_200"
+                android:src="@drawable/ic_star_rate"/>
+
+            <TextView
+                android:id="@+id/s_like"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                android:textColor="?android:textColorSecondary"
+                android:layout_below="@id/s_one"
+                android:paddingTop="5dp"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:drawableStart="@drawable/ic_like"
+                android:drawablePadding="4dp"/>
+
+            <TextView
+                android:id="@+id/s_comment"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Comment"
+                android:textColor="?android:textColorSecondary"
+                android:layout_below="@id/s_one"
+                android:layout_toEndOf="@id/s_like"
+                android:paddingTop="5dp"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawablePadding="4dp"/>
+
+            <TextView
+                android:id="@+id/s_share"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textColor="?android:textColorSecondary"
+                android:layout_below="@id/s_one"
+                android:layout_toEndOf="@id/s_comment"
+                android:paddingTop="5dp"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:drawableStart="@drawable/ic_share"
+                android:drawablePadding="4dp"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_below="@id/s_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About the Branch"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/navy_blue"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

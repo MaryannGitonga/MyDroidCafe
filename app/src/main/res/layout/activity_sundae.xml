@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SundaeActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sundae_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/sundae_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/css_gray"
+                android:paddingBottom="10dp"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/sundae_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_title"
+                android:textColor="#ffff00"
+                android:layout_alignBottom="@id/sundae_image"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            <TextView
+                android:id="@+id/sundae_prep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prep_cook_time_2hrs"
+                android:textColor="?android:textColorSecondary"
+                android:layout_below="@id/sundae_title"
+                android:padding="10dp"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:drawableStart="@drawable/ic_prep_time"/>
+
+            <!--Add a horizontal line-->
+            <View
+                android:id="@+id/sundae_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/css_gray"
+                android:layout_below="@id/sundae_prep"/>
+
+            <TextView
+                android:id="@+id/sundae_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_short_description"
+                android:textColor="@color/navy_blue"
+                android:layout_below="@id/sundae_divider"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:textStyle="italic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_below="@id/sundae_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How to Prepare Donuts"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/navy_blue"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
